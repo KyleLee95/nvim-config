@@ -76,7 +76,7 @@ use{'MunifTanjim/prettier.nvim', config = get_setup("prettier")}
 
 --treesitter -- syntax highlighting
 use {
-'nvim-treesitter/nvim-treesitter', 
+'nvim-treesitter/nvim-treesitter',
  run = ':TSUpdate',
  config = get_setup('treesitter')
 }
@@ -99,6 +99,13 @@ use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
 
 --vim airline -- nice status bar at the bottom.
 use {"vim-airline/vim-airline"}
+
+
+--coderunner (just like vscode! Wow, why not just use vscode? it would be way less work)
+use { 'CRAG666/code_runner.nvim', requires = 'nvim-lua/plenary.nvim', config = get_setup("coderunner") }
+
+--integrated terminal like vscode! c'mon bro, you really just want vscode
+use { 'CRAG666/betterTerm.nvim', config = get_setup("betterTerm")}
 
 
 --Theme -- why even us nvim if you just want it to look like vscode?

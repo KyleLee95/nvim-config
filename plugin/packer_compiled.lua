@@ -84,6 +84,12 @@ _G.packer_plugins = {
     path = "/Users/kyle/.local/share/nvim/site/pack/packer/start/barbar.nvim",
     url = "https://github.com/romgrk/barbar.nvim"
   },
+  ["betterTerm.nvim"] = {
+    config = { 'require("setup/betterTerm")' },
+    loaded = true,
+    path = "/Users/kyle/.local/share/nvim/site/pack/packer/start/betterTerm.nvim",
+    url = "https://github.com/CRAG666/betterTerm.nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/kyle/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -108,6 +114,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/kyle/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
+  ["code_runner.nvim"] = {
+    config = { 'require("setup/coderunner")' },
+    loaded = true,
+    path = "/Users/kyle/.local/share/nvim/site/pack/packer/start/code_runner.nvim",
+    url = "https://github.com/CRAG666/code_runner.nvim"
   },
   ["friendly-snippets"] = {
     loaded = true,
@@ -207,26 +219,34 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: betterTerm.nvim
+time([[Config for betterTerm.nvim]], true)
+require("setup/betterTerm")
+time([[Config for betterTerm.nvim]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 require("setup/autopairs")
 time([[Config for nvim-autopairs]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-require("setup/treesitter")
-time([[Config for nvim-treesitter]], false)
+-- Config for: code_runner.nvim
+time([[Config for code_runner.nvim]], true)
+require("setup/coderunner")
+time([[Config for code_runner.nvim]], false)
 -- Config for: vscode.nvim
 time([[Config for vscode.nvim]], true)
 require("setup/vscode")
 time([[Config for vscode.nvim]], false)
--- Config for: prettier.nvim
-time([[Config for prettier.nvim]], true)
-require("setup/prettier")
-time([[Config for prettier.nvim]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+require("setup/treesitter")
+time([[Config for nvim-treesitter]], false)
 -- Config for: null-ls.nvim
 time([[Config for null-ls.nvim]], true)
 require("setup/nullls")
 time([[Config for null-ls.nvim]], false)
+-- Config for: prettier.nvim
+time([[Config for prettier.nvim]], true)
+require("setup/prettier")
+time([[Config for prettier.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
