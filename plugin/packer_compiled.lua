@@ -121,6 +121,14 @@ _G.packer_plugins = {
     path = "/Users/kyle/.local/share/nvim/site/pack/packer/start/code_runner.nvim",
     url = "https://github.com/CRAG666/code_runner.nvim"
   },
+  ["dashboard-nvim"] = {
+    config = { 'require("setup/dashboard")' },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/Users/kyle/.local/share/nvim/site/pack/packer/opt/dashboard-nvim",
+    url = "https://github.com/glepnir/dashboard-nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/kyle/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -219,34 +227,41 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: betterTerm.nvim
-time([[Config for betterTerm.nvim]], true)
-require("setup/betterTerm")
-time([[Config for betterTerm.nvim]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-require("setup/autopairs")
-time([[Config for nvim-autopairs]], false)
--- Config for: code_runner.nvim
-time([[Config for code_runner.nvim]], true)
-require("setup/coderunner")
-time([[Config for code_runner.nvim]], false)
--- Config for: vscode.nvim
-time([[Config for vscode.nvim]], true)
-require("setup/vscode")
-time([[Config for vscode.nvim]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-require("setup/treesitter")
-time([[Config for nvim-treesitter]], false)
--- Config for: null-ls.nvim
-time([[Config for null-ls.nvim]], true)
-require("setup/nullls")
-time([[Config for null-ls.nvim]], false)
 -- Config for: prettier.nvim
 time([[Config for prettier.nvim]], true)
 require("setup/prettier")
 time([[Config for prettier.nvim]], false)
+-- Config for: betterTerm.nvim
+time([[Config for betterTerm.nvim]], true)
+require("setup/betterTerm")
+time([[Config for betterTerm.nvim]], false)
+-- Config for: null-ls.nvim
+time([[Config for null-ls.nvim]], true)
+require("setup/nullls")
+time([[Config for null-ls.nvim]], false)
+-- Config for: vscode.nvim
+time([[Config for vscode.nvim]], true)
+require("setup/vscode")
+time([[Config for vscode.nvim]], false)
+-- Config for: code_runner.nvim
+time([[Config for code_runner.nvim]], true)
+require("setup/coderunner")
+time([[Config for code_runner.nvim]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+require("setup/autopairs")
+time([[Config for nvim-autopairs]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+require("setup/treesitter")
+time([[Config for nvim-treesitter]], false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Event lazy-loads
+time([[Defining lazy-load event autocommands]], true)
+vim.cmd [[au VimEnter * ++once lua require("packer.load")({'dashboard-nvim'}, { event = "VimEnter *" }, _G.packer_plugins)]]
+time([[Defining lazy-load event autocommands]], false)
+vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

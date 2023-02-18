@@ -107,7 +107,13 @@ use { 'CRAG666/code_runner.nvim', requires = 'nvim-lua/plenary.nvim', config = g
 --integrated terminal like vscode! c'mon bro, you really just want vscode
 use { 'CRAG666/betterTerm.nvim', config = get_setup("betterTerm")}
 
-
+--dashboard -- lol why not just use doomacs? oh right... you did and you sucked at it lol.
+use {
+  'glepnir/dashboard-nvim',
+  event = 'VimEnter',
+  config = get_setup("dashboard"),
+  requires = {'nvim-tree/nvim-web-devicons'}
+}
 --Theme -- why even us nvim if you just want it to look like vscode?
 use {"Mofiqul/vscode.nvim", config = get_setup("vscode")}
 
