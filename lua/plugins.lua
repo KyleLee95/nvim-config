@@ -27,9 +27,8 @@ function get_setup(name)
 end
 
 return require('packer').startup(function(use)
-  
 -- Packer 
-use 'wbthomason/packer.nvim'  
+use 'wbthomason/packer.nvim'
 
 
 --NeoTree -- see everything as a tree because cd'ing and ls'ing is for losers.
@@ -40,7 +39,8 @@ use 'wbthomason/packer.nvim'
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
       "MunifTanjim/nui.nvim",
-    }
+    },
+	config = get_setup("neotree")
   }
 --LSP -- *beep boop* autocomplete! But not co-pilot lol
 

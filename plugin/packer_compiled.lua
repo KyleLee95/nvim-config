@@ -150,6 +150,7 @@ _G.packer_plugins = {
     url = "https://github.com/williamboman/mason.nvim"
   },
   ["neo-tree.nvim"] = {
+    config = { 'require("setup/neotree")' },
     loaded = true,
     path = "/Users/kyle/.local/share/nvim/site/pack/packer/start/neo-tree.nvim",
     url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
@@ -227,34 +228,38 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-require("setup/autopairs")
-time([[Config for nvim-autopairs]], false)
 -- Config for: nvim-treesitter
 time([[Config for nvim-treesitter]], true)
 require("setup/treesitter")
 time([[Config for nvim-treesitter]], false)
--- Config for: vscode.nvim
-time([[Config for vscode.nvim]], true)
-require("setup/vscode")
-time([[Config for vscode.nvim]], false)
--- Config for: betterTerm.nvim
-time([[Config for betterTerm.nvim]], true)
-require("setup/betterTerm")
-time([[Config for betterTerm.nvim]], false)
--- Config for: null-ls.nvim
-time([[Config for null-ls.nvim]], true)
-require("setup/nullls")
-time([[Config for null-ls.nvim]], false)
--- Config for: code_runner.nvim
-time([[Config for code_runner.nvim]], true)
-require("setup/coderunner")
-time([[Config for code_runner.nvim]], false)
 -- Config for: prettier.nvim
 time([[Config for prettier.nvim]], true)
 require("setup/prettier")
 time([[Config for prettier.nvim]], false)
+-- Config for: code_runner.nvim
+time([[Config for code_runner.nvim]], true)
+require("setup/coderunner")
+time([[Config for code_runner.nvim]], false)
+-- Config for: null-ls.nvim
+time([[Config for null-ls.nvim]], true)
+require("setup/nullls")
+time([[Config for null-ls.nvim]], false)
+-- Config for: betterTerm.nvim
+time([[Config for betterTerm.nvim]], true)
+require("setup/betterTerm")
+time([[Config for betterTerm.nvim]], false)
+-- Config for: neo-tree.nvim
+time([[Config for neo-tree.nvim]], true)
+require("setup/neotree")
+time([[Config for neo-tree.nvim]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+require("setup/autopairs")
+time([[Config for nvim-autopairs]], false)
+-- Config for: vscode.nvim
+time([[Config for vscode.nvim]], true)
+require("setup/vscode")
+time([[Config for vscode.nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads

@@ -43,12 +43,22 @@ dashboard.setup({
       {
         icon = ' ',
         icon_hl = 'Title',
-        desc = 'Find File           ',
+        desc = 'Find File',
         desc_hl = 'String',
         key = 'b',
         keymap = ', f f',
         key_hl = 'Number',
         action = 'lua print(2)'
+      },
+      {
+        icon = ' ',
+        icon_hl = 'Title',
+        desc = 'dot files',
+        desc_hl = 'String',
+        key = 'b',
+        keymap = ', b',
+        key_hl = 'Number',
+        action = 'cd /Users/kyle/.config/nvim'
       },
     },
     footer = {}  --your footer
