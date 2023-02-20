@@ -129,12 +129,19 @@ _G.packer_plugins = {
     path = "/Users/kyle/.local/share/nvim/site/pack/packer/opt/dashboard-nvim",
     url = "https://github.com/glepnir/dashboard-nvim"
   },
+  ["eslint.nvim"] = {
+    config = { 'require("setup/eslint")' },
+    loaded = true,
+    path = "/Users/kyle/.local/share/nvim/site/pack/packer/start/eslint.nvim",
+    url = "https://github.com/MunifTanjim/eslint.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/kyle/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
   ["lsp-zero.nvim"] = {
+    config = { 'require("setup/lspzero")' },
     loaded = true,
     path = "/Users/kyle/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
@@ -178,6 +185,7 @@ _G.packer_plugins = {
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-lspconfig"] = {
+    config = { 'require("setup/lspconfig")' },
     loaded = true,
     path = "/Users/kyle/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
@@ -191,7 +199,7 @@ _G.packer_plugins = {
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/Users/kyle/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
-    url = "https://github.com/nvim-tree/nvim-web-devicons"
+    url = "https://github.com/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -228,30 +236,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: prettier.nvim
-time([[Config for prettier.nvim]], true)
-require("setup/prettier")
-time([[Config for prettier.nvim]], false)
--- Config for: betterTerm.nvim
-time([[Config for betterTerm.nvim]], true)
-require("setup/betterTerm")
-time([[Config for betterTerm.nvim]], false)
--- Config for: null-ls.nvim
-time([[Config for null-ls.nvim]], true)
-require("setup/nullls")
-time([[Config for null-ls.nvim]], false)
--- Config for: code_runner.nvim
-time([[Config for code_runner.nvim]], true)
-require("setup/coderunner")
-time([[Config for code_runner.nvim]], false)
--- Config for: neo-tree.nvim
-time([[Config for neo-tree.nvim]], true)
-require("setup/neotree")
-time([[Config for neo-tree.nvim]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-require("setup/autopairs")
-time([[Config for nvim-autopairs]], false)
 -- Config for: nvim-treesitter
 time([[Config for nvim-treesitter]], true)
 require("setup/treesitter")
@@ -260,6 +244,42 @@ time([[Config for nvim-treesitter]], false)
 time([[Config for vscode.nvim]], true)
 require("setup/vscode")
 time([[Config for vscode.nvim]], false)
+-- Config for: betterTerm.nvim
+time([[Config for betterTerm.nvim]], true)
+require("setup/betterTerm")
+time([[Config for betterTerm.nvim]], false)
+-- Config for: neo-tree.nvim
+time([[Config for neo-tree.nvim]], true)
+require("setup/neotree")
+time([[Config for neo-tree.nvim]], false)
+-- Config for: eslint.nvim
+time([[Config for eslint.nvim]], true)
+require("setup/eslint")
+time([[Config for eslint.nvim]], false)
+-- Config for: prettier.nvim
+time([[Config for prettier.nvim]], true)
+require("setup/prettier")
+time([[Config for prettier.nvim]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+require("setup/autopairs")
+time([[Config for nvim-autopairs]], false)
+-- Config for: null-ls.nvim
+time([[Config for null-ls.nvim]], true)
+require("setup/nullls")
+time([[Config for null-ls.nvim]], false)
+-- Config for: nvim-lspconfig
+time([[Config for nvim-lspconfig]], true)
+require("setup/lspconfig")
+time([[Config for nvim-lspconfig]], false)
+-- Config for: lsp-zero.nvim
+time([[Config for lsp-zero.nvim]], true)
+require("setup/lspzero")
+time([[Config for lsp-zero.nvim]], false)
+-- Config for: code_runner.nvim
+time([[Config for code_runner.nvim]], true)
+require("setup/coderunner")
+time([[Config for code_runner.nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads

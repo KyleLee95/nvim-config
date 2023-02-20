@@ -1,3 +1,7 @@
+local status_ok, neotree = pcall(require, 'neo-tree')
+if not status_ok then
+	return
+end
 require("neo-tree").setup({
         close_if_last_window = false, -- Close Neo-tree if it is the last window left in the tab
         popup_border_style = "rounded",

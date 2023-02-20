@@ -1,13 +1,21 @@
 -- Stolen from https://github.com/ThePrimeagen/init.lua/blob/master/after/plugin/lsp.lua
-local status_ok, lsp = pcall(require, 'zero-lsp')
+local status_ok, lsp = pcall(require, 'lsp-zero')
 if not status_ok then
 	return
 end
-lsp.preset("recommended")
+
+
+lsp.preset({
+	name = 'minimal',
+	set_lsp_keymaps = true,
+	manage_nvim_cmp = true,
+	suggest_lsp_servers = false,
+})
 
 lsp.ensure_installed({
 	'tsserver',
 	'rust_analyzer',
+	'eslint'
 })
 
 -- Fix Undefined global 'vim'
@@ -38,15 +46,6 @@ lsp.setup_nvim_cmp({
 	mapping = cmp_mappings
 })
 
-lsp.set_preferences({
-	suggest_lsp_servers = false,
-	sign_icons = {
-		error = 'E',
-		warn = 'W',
-		hint = 'H',
-		info = 'I'
-	}
-})
 
 lsp.on_attach(function(client, bufnr)
 	local opts = { buffer = bufnr, remap = false }
@@ -63,8 +62,41 @@ lsp.on_attach(function(client, bufnr)
 	vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
-lsp.setup()
 
+lsp.setup()
+--[[
+--
+--
+
+vim.fn.sign_define(
+	'DiagnosticSignError',
+	{ text = " ", texthl = 'LspDiagnosticsDefaultError' }
+)
+
+vim.fn.sign_define(
+	'DiagnosticSignWarn',
+	{ text = " ", texthl = 'LspDiagnosticsDefaultWarning' }
+)
+
+vim.fn.sign_define(
+	'DiagnosticSignInfo',
+	{ text = " ", texthl = 'LspDiagnosticsDefaultInformation' }
+)
+
+vim.fn.sign_define(
+	'DiagnosticSignHint',
+	{ text = " ", texthl = 'LspDiagnosticsDefaultHint' }
+)
+--
+--
+--]]
 vim.diagnostic.config({
-	virtual_text = true
+	virtual_text = false,
+	signs = true,
+	update_in_insert = false,
+	underline = true,
+	severity_sort = true,
+	float = true,
 })
+vim.o.updatetime = 250
+vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
