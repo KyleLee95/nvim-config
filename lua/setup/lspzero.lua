@@ -17,6 +17,8 @@ lsp.ensure_installed({
 	'rust_analyzer',
 	'eslint'
 })
+
+
 -- Fix Undefined global 'vim'
 lsp.configure('lua_ls', {
 	--
@@ -66,6 +68,7 @@ end)
 
 
 lsp.setup()
+
 vim.fn.sign_define(
 	'DiagnosticSignError',
 	{ text = " ", texthl = 'LspDiagnosticsDefaultError' }

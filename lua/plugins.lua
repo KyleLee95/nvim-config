@@ -39,7 +39,7 @@ return require('packer').startup(function(use)
 		branch = 'v1.x',
 		requires = {
 			-- LSP Support
-			{ 'neovim/nvim-lspconfig'}, -- Required
+			{ 'neovim/nvim-lspconfig',            config = get_setup('lspconfig') }, -- Required
 			{ 'williamboman/mason.nvim' }, -- Optional
 			{ 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
@@ -58,7 +58,7 @@ return require('packer').startup(function(use)
 	}
 
 	--LSP config for P R E T T I E R (now I don't have to indent my own code)
-	use { 'neovim/nvim-lspconfig', config= get_setup("lspconfig")}
+	use { 'neovim/nvim-lspconfig', config = get_setup("lspconfig") }
 	use { 'jose-elias-alvarez/null-ls.nvim', config = get_setup("nullls") }
 	use { 'MunifTanjim/prettier.nvim', config = get_setup("prettier") }
 	use { 'MunifTanjim/eslint.nvim', config = get_setup("eslint") }
