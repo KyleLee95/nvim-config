@@ -242,46 +242,46 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: null-ls.nvim
-time([[Config for null-ls.nvim]], true)
-require("setup/nullls")
-time([[Config for null-ls.nvim]], false)
--- Config for: lsp-zero.nvim
-time([[Config for lsp-zero.nvim]], true)
-require("setup/lspzero")
-time([[Config for lsp-zero.nvim]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-require("setup/autopairs")
-time([[Config for nvim-autopairs]], false)
--- Config for: trouble.nvim
-time([[Config for trouble.nvim]], true)
-require("setup/trouble")
-time([[Config for trouble.nvim]], false)
--- Config for: prettier.nvim
-time([[Config for prettier.nvim]], true)
-require("setup/prettier")
-time([[Config for prettier.nvim]], false)
--- Config for: vscode.nvim
-time([[Config for vscode.nvim]], true)
-require("setup/vscode")
-time([[Config for vscode.nvim]], false)
--- Config for: code_runner.nvim
-time([[Config for code_runner.nvim]], true)
-require("setup/coderunner")
-time([[Config for code_runner.nvim]], false)
--- Config for: nvim-lspconfig
-time([[Config for nvim-lspconfig]], true)
-require("setup/lspconfig")
-time([[Config for nvim-lspconfig]], false)
--- Config for: neo-tree.nvim
-time([[Config for neo-tree.nvim]], true)
-require("setup/neotree")
-time([[Config for neo-tree.nvim]], false)
 -- Config for: eslint.nvim
 time([[Config for eslint.nvim]], true)
 require("setup/eslint")
 time([[Config for eslint.nvim]], false)
+-- Config for: neo-tree.nvim
+time([[Config for neo-tree.nvim]], true)
+require("setup/neotree")
+time([[Config for neo-tree.nvim]], false)
+-- Config for: vscode.nvim
+time([[Config for vscode.nvim]], true)
+require("setup/vscode")
+time([[Config for vscode.nvim]], false)
+-- Config for: lsp-zero.nvim
+time([[Config for lsp-zero.nvim]], true)
+require("setup/lspzero")
+time([[Config for lsp-zero.nvim]], false)
+-- Config for: code_runner.nvim
+time([[Config for code_runner.nvim]], true)
+require("setup/coderunner")
+time([[Config for code_runner.nvim]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+require("setup/autopairs")
+time([[Config for nvim-autopairs]], false)
+-- Config for: nvim-lspconfig
+time([[Config for nvim-lspconfig]], true)
+require("setup/lspconfig")
+time([[Config for nvim-lspconfig]], false)
+-- Config for: prettier.nvim
+time([[Config for prettier.nvim]], true)
+require("setup/prettier")
+time([[Config for prettier.nvim]], false)
+-- Config for: null-ls.nvim
+time([[Config for null-ls.nvim]], true)
+require("setup/nullls")
+time([[Config for null-ls.nvim]], false)
+-- Config for: trouble.nvim
+time([[Config for trouble.nvim]], true)
+require("setup/trouble")
+time([[Config for trouble.nvim]], false)
 -- Config for: nvim-treesitter
 time([[Config for nvim-treesitter]], true)
 require("setup/treesitter")
