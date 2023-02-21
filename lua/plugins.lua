@@ -63,6 +63,13 @@ return require('packer').startup(function(use)
 	use { 'MunifTanjim/prettier.nvim', config = get_setup("prettier") }
 	use { 'MunifTanjim/eslint.nvim', config = get_setup("eslint") }
 
+	-- trouble for nicer looking diagnostic icons
+	use {
+		"folke/trouble.nvim",
+		requires = "nvim-tree/nvim-web-devicons",
+		config = get_setup('trouble')
+	}
+
 
 	--treesitter -- syntax highlighting
 	use {
