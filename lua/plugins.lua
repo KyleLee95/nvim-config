@@ -59,8 +59,8 @@ return require("packer").startup(function(use)
 	--LSP config for P R E T T I E R (now I don't have to indent my own code)
 	use({ "neovim/nvim-lspconfig", config = get_setup("lspconfig") })
 	use({ "jose-elias-alvarez/null-ls.nvim", config = get_setup("nullls") })
-	use({ "MunifTanjim/prettier.nvim", config = get_setup("prettier") })
-	use({ "MunifTanjim/eslint.nvim", config = get_setup("eslint") })
+	--	use({ "MunifTanjim/prettier.nvim", config = get_setup("prettier") })
+	--	use({ "MunifTanjim/eslint.nvim", config = get_setup("eslint") })
 
 	-- trouble for nicer looking diagnostic icons
 	use({
