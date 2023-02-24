@@ -17,3 +17,11 @@ vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
 vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
 vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
+
+--Remap copy paste to work with system clipboard
+vim.keymap.set("n", "<leader>Y", "+yg")
+vim.keymap.set("n", "<leader>y", "+y")
+vim.keymap.set("n", "<leader>yy", "+yy")
+
+vim.keymap.set("n", "<leader>p", "+p")
+vim.keymap.set("n", "<leader>P", "+P")
